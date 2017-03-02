@@ -1,0 +1,14 @@
+<% @entries.each_slice(3) do |group| %>
+  <div class="row">
+    <% group.each do |entry| %>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title"><%= link_to entry.title, entry.url, target: '_blank' %></h4>
+            <h6 class="card-subtitle mb-2 text-muted"><i> published <%= time_ago_in_words(entry.pubdate) %> ago.</i><br/><br/><i class="feed_title"><%= entry.feed_title %></i></h6>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

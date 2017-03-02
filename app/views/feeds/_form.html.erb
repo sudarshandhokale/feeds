@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_for @feed, :html => { :class => "form-horizontal feed" } do |f| %>
+      <div class="form-group">
+        <%= f.label :url, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :url, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:url) %>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                    feeds_path, :class => 'btn btn-default' %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+

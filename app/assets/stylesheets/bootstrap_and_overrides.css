@@ -1,0 +1,19 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+.card {
+	border: 2px solid #d6d1d1;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 15px;
+}
+
+.feed_title {
+	color: #770428;
+  font-weight: bold;
+}

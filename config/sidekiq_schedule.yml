@@ -1,0 +1,5 @@
+schedule:  
+  every: "10s"
+  class: "MultiplesFeedJob"
+  queue: default
+  active_job: true
