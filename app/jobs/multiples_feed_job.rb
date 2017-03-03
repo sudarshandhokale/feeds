@@ -2,9 +2,9 @@ class MultiplesFeedJob < ApplicationJob
   queue_as :default
 
   def perform
-    Feed.all.each do |feed|
+    Feed.where.not(title: nil).each do |feed|
       response = FeedReader.get(feed.url)
-      feed.update(title: response[:title])
+      next if response.nil?
       response[:entries].each do |entry|
         local_entry = feed.entries.where(title: entry[:title]).first_or_initialize
         local_entry.update_attributes(entry)

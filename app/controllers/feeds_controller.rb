@@ -27,7 +27,6 @@ class FeedsController < ApplicationController
     @feed = Feed.new(feed_params)
     respond_to do |format|
       if @feed.save
-        FeedJob.perform_later @feed
         format.html { redirect_to feeds_url, notice: 'Feed was successfully created.' }
         format.json { render :show, status: :created, location: @feed }
       else
@@ -42,7 +41,6 @@ class FeedsController < ApplicationController
   def update
     respond_to do |format|
       if @feed.update(feed_params)
-        FeedJob.perform_later @feed
         format.html { redirect_to feeds_url, notice: 'Feed was successfully updated.' }
         format.json { render :show, status: :ok, location: @feed }
       else
