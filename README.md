@@ -2,16 +2,17 @@
 
 RSS Reader
 
-This simple RSS reader application used to:
-		1. Add/Remove/Edit Feed URLS.
-		2. List all feeds.
-		3. Fetch latest posts from all feeds and diplay them in the most recent order.
+This is simple RSS reader application used to:
+
+	1. Add/Remove/Edit Feed URLS.
+	2. List all feeds.
+	3. Fetch latest posts from all feeds and diplay them in the most recent order.
 
 ## Prerequisites
 		
-		1. Ruby- 2.3.0
-		2. Rails- 5.0.0
-		3. Redis-server (sudo apt-get install redis-server)
+	1. Ruby- 2.3.0
+	2. Rails- 5.0.0
+	3. Redis-server (sudo apt-get install redis-server)
 
 ## Installation
 
@@ -19,15 +20,15 @@ This simple RSS reader application used to:
 	2. Navigate to project folder
 	3. Run the command
 
-			bundle install
+		$ bundle install
 
-			rake db:migrate
+		$ rake db:migrate
 
 	4. Execute the below commands:
 
-			sudo chmod 777 run_service.sh
+		$ sudo chmod 777 run_service.sh
 
-			./run_services.sh
+		$ ./run_services.sh
 
 
 ## License
