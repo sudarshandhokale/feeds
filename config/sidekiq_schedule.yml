@@ -1,5 +1,5 @@
 schedule:  
-  every: "1m"
+  every: "5s"
   class: "MultiplesFeedJob"
   queue: default
   active_job: true

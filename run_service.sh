@@ -1,4 +1,4 @@
-PID_DIR="`pwd`/tmp/pids"
+PID_DIR="`pwd`/pids"
 LOG_DIR="`pwd`/log"
 if [[ -z $1 ]]; then
   ENVIRONMENT=development
